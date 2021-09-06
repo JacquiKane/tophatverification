@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopHat Verification</title>
+    <style>
+        body {
+            background-image: url('tophat.png');
+            background-repeat: no-repeat;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            color: white;
+        }
+
+        .buttonstyle {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centered">
+        <div>
+            <label for="name">Name (4 to 8 characters):</label>
+
+            <input class="username" type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="passcode">Passcode (4 to 8 characters):</label>
+
+            <input class="passcode" type="password" id="passcode" name="newpassword" required minlength="4"
+                maxlength="8" size="10">
+        </div>
+        <div style="margin-left: 40%; margin-right: auto; padding-top: 20px;">
+            <button type="submit" value="Submit" onClick="phished()">Submit</button>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    function phished() {
+        let username = document.querySelector(".username").value;
+        console.log(username);
+        let password = document.querySelector(".passcode").value;
+
+        console.log(password);
+        alert(username + " your top secret password is now exposed " + password);
+    }
+
+</script>
+
+</html>
