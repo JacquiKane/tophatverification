@@ -10,6 +10,7 @@
         body {
             background-image: url('tophat.png');
             background-repeat: no-repeat;
+            font-size: largest;
         }
 
         .centered {
@@ -30,18 +31,20 @@
 <body>
     <div class="centered">
         <div>
-            <label for="name">Name (4 to 8 characters):</label>
+            <label for="name">User name :</label>
 
-            <input class="username" type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+            <input class="username" type="text" id="name" name="name" required minlength="2" maxlength="20" size="20">
 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <label for="passcode">Passcode (4 to 8 characters):</label>
 
             <input class="passcode" type="password" id="passcode" name="newpassword" required minlength="4"
                 maxlength="8" size="10">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit" value="Submit" onClick="phished()">Save updated passcode</button>
         </div>
         <div style="margin-left: 40%; margin-right: auto; padding-top: 20px;">
-            <button type="submit" value="Submit" onClick="phished()">Submit</button>
+
         </div>
     </div>
 
